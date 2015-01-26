@@ -2,6 +2,8 @@ package com.cjswordsearch.wordsearch;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class WordSearchCreatorPanel extends JPanel {
 
@@ -9,7 +11,7 @@ public class WordSearchCreatorPanel extends JPanel {
     JTextArea wordsToUse;
     JButton createPuzzle;
 
-    int characterPerSide;
+    int charactersPerSide;
 
     WordSearchCreatorPanel(WordSearchFrame frame) {
         setLayout(new BorderLayout());
@@ -20,6 +22,12 @@ public class WordSearchCreatorPanel extends JPanel {
         }
         wordsToUse = new JTextArea("Enter each word to be used in the word search on a new line");
         createPuzzle = new JButton("Create Word Search");
+        createPuzzle.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
 
         add(sizes, BorderLayout.NORTH);
         add(new JScrollPane(wordsToUse), BorderLayout.CENTER);

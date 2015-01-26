@@ -13,7 +13,8 @@ public class WordSearchFrame  extends JFrame{
         setLayout(new FlowLayout());
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
-        WordSearchCreatorPanel wscp = new WordSearchCreatorPanel();
+        WordSearchCreatorPanel wscp = new WordSearchCreatorPanel(this);
         setContentPane(wscp);
+        revalidate();
     }
 }
